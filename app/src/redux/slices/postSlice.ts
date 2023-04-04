@@ -1,4 +1,18 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+
+type Post = {
+    post: {
+        id:number;
+        advice:string;
+    }
+}
+
+type PostState = {
+    posts: Post[];
+}
+
+
+
 export const fetchPosts = createAsyncThunk(
     'posts/fetchPosts',
     async function () {

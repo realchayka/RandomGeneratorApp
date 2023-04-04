@@ -2,8 +2,13 @@ import React from 'react';
 
 import styles from './Main.module.scss'
 
+interface PostItemProps{
+    id:number;
+    advice:string;
+    newMessage: () => void;
 
-const Main = ({id, advice, newMessage}) => {
+}
+const Main:React.FC<PostItemProps> = ({id, advice, newMessage}) => {
 
 
     return (
